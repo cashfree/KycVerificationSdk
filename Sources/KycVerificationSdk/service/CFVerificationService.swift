@@ -47,11 +47,11 @@ final public class CFVerificationService : NSObject{
     public func doVerification(_ url: String,_ viewController: UIViewController,_ callback: VerificationResponseDelegate,_ accessToken: String? = nil) throws{
         
        
-        // 1. Validate base URL
-        guard !url.isEmpty else {
-            throw VerificationError.URL_MISSING
-        }
-        
+            // 1. Validate base URL
+            guard !url.isEmpty else {
+                throw VerificationError.URL_MISSING
+            }
+            
           // 2. Build updated URL with the new function
            guard let updatedUrlString = buildVerificationURL(from: url, token: accessToken) else {
                     throw VerificationError.INVALID_URL
@@ -62,21 +62,19 @@ final public class CFVerificationService : NSObject{
                 throw VerificationError.INVALID_URL
             }
         
-        print(updatedUrlString,"updatedUrlString")
+           print(updatedUrlString,"updatedUrlString")
 
     
         
-        guard let navigationController = viewController.navigationController else {
+            guard let navigationController = viewController.navigationController else {
                     throw NSError(domain: "NavigationControllerNotFound", code: 1, userInfo: nil)
                 }
-       // init(url: String, accessToken: String?, delegate: VerificationResponseDelegate) {
+            // init(url: String, accessToken: String?, delegate: VerificationResponseDelegate) {
         
-        let vc = CFKycVerificationViewController(url: updatedUrlString, accessToken: accessToken,delegate: callback)
+           let vc = CFKycVerificationViewController(url: updatedUrlString, accessToken: accessToken,delegate: callback)
       
         
-        navigationController.pushViewController(vc, animated: true)
-
-        
+          navigationController.pushViewController(vc, animated: true) 
     }
     
     @objc

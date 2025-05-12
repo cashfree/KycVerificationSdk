@@ -2,7 +2,6 @@
 //  CFKycVerificationSession.swift
 //  KycVerificationSdk
 //  Created by Renu Bisht on 26/06/24.
-//
 
 
 import Foundation
