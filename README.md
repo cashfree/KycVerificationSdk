@@ -1,6 +1,6 @@
 # KycVerificationSdk
 
-The `KycVerificationSdk` is a Swift-based SDK designed to streamline the KYC (Know Your Customer) verification process. It provides a seamless integration for developers to implement KYC workflows, including video KYC, secure sharing, and user verification, with minimal effort.
+The `KycVerificationSdk` is a Swift-based SDK designed to streamline the KYC (Know Your Customer) verification process. It provides a seamless integration for developers to implement KYC workflows, including video KYC, secure sharing, and user verification, with minimal effort
 
 ---
 
